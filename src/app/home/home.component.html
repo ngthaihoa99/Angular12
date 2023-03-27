@@ -1,3 +1,10 @@
 <div class="test">
-  <p>home works!</p>
+  <h2>home works!</h2>
+  <input type="text" [(ngModel)]="age"/>
+  <h3>{{ name }}</h3>
+  <h3>{{ age }}</h3>
+  <div *ngIf="age >= 18; then adult; else child"></div>
+  <ng-template #child><h2>child</h2></ng-template>
+  <ng-template #adult><h2>adult</h2></ng-template>
+  <button (click)="resetName()">Reset name</button>
 </div>
